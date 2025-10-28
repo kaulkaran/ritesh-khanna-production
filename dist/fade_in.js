@@ -2,12 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.querySelector("body");
   body.classList.remove("opacity-0");
   body.classList.add("opacity-100");
-  const photos = document.querySelectorAll("img");
+
+  // Select both images and videos
+  const mediaElements = document.querySelectorAll("img, video");
   let delay = 0;
-  photos.forEach((photo) => {
+
+  mediaElements.forEach((element) => {
     setTimeout(() => {
-      photo.classList.remove("opacity-0");
-      photo.classList.add("opacity-100");
+      element.classList.remove("opacity-0");
+      element.classList.add("opacity-100");
     }, delay);
     delay += 100;
   });
